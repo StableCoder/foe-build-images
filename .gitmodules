@@ -1,0 +1,3 @@
+[submodule "windows/ps-scripts"]
+	path = windows/ps-scripts
+	url = https://git.stabletec.com/other/scripts.git
