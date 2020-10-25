@@ -41,6 +41,16 @@ Ubuntu Build:
     OS: ubuntu
   <<: *build_template
 
+Windows Build:
+  stage: Build
+  except:
+    - master
+  tags:
+    - docker-builder-windows
+    - amd64
+  script:
+    - cd windows; .\image_builder.ps1 -imagename test -test
+
 # Image Push Stage
 
 .push_image: &push_template
@@ -77,3 +87,17 @@ Ubuntu Push:
     PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
     OS: ubuntu
   <<: *push_template
+
+Windows Push:
+  stage: Push
+  only:
+    - master
+  tags:
+    - docker-builder-windows
+    - amd64
+  before_script:
+    - docker login -u $env:DOCKER_USER -p "$env:DOCKER_PASSWORD" $env:DOCKER_REGISTRY
+  script:
+    - cd windows; .\image_builder.ps1 -push -imagename ${env:DOCKER_REGISTRY}${env:IMAGE_NAME} -test
+  after_script:
+    - docker logout $env:DOCKER_REGISTRY
