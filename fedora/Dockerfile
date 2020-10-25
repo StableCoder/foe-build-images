@@ -1,4 +1,4 @@
-RUN stabletec/build-core:fedora
+FROM stabletec/build-core:fedora
 
 RUN dnf install -y \
     catch-devel \

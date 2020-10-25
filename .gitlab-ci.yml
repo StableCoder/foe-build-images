@@ -1,0 +1,79 @@
+# Global
+
+stages:
+  - Build
+  - Push
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  DOCKER_REGISTRY: ''
+  IMAGE_NAME: 'stabletec/build-foe'
+
+# Image Builds
+
+.build_image: &build_template
+  except:
+    - master
+  script:
+    - cd $OS
+    - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t test:${OS} -f Dockerfile .
+
+Fedora Build:
+  stage: Build
+  tags:
+    - docker-builder-linux
+    - amd64
+    - arm64
+  variables:
+    PLATFORMS: "linux/amd64,linux/arm64"
+    OS: fedora
+  <<: *build_template
+
+Ubuntu Build:
+  stage: Build
+  tags:
+    - docker-builder-linux
+    - amd64
+    - arm64
+    - armv7
+  variables:
+    PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
+    OS: ubuntu
+  <<: *build_template
+
+# Image Push Stage
+
+.push_image: &push_template
+  only:
+    - master
+  before_script:
+    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
+  script:
+    - cd $OS
+    - docker buildx build --push --pull ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile . || echo
+    - docker buildx build --push ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile .
+  after_script:
+    - docker logout ${DOCKER_REGISTRY}
+
+Fedora Push:
+  stage: Push
+  tags:
+    - docker-builder-linux
+    - amd64
+    - arm64
+  variables:
+    PLATFORMS: "linux/amd64,linux/arm64"
+    OS: fedora
+  <<: *push_template
+
+Ubuntu Push:
+  stage: Push
+  tags:
+    - docker-builder-linux
+    - amd64
+    - arm64
+    - armv7
+  variables:
+    PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
+    OS: ubuntu
+  <<: *push_template
