@@ -13,7 +13,7 @@ variables:
 
 .build_image: &build_template
   except:
-    - master
+    - main
   script:
     - cd $OS
     - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t test:${OS} -f Dockerfile .
@@ -44,7 +44,7 @@ Ubuntu Build:
 Windows Build:
   stage: Build
   except:
-    - master
+    - main
   tags:
     - docker-builder-windows
     - amd64
@@ -55,7 +55,7 @@ Windows Build:
 
 .push_image: &push_template
   only:
-    - master
+    - main
   before_script:
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
   script:
@@ -91,7 +91,7 @@ Ubuntu Push:
 Windows Push:
   stage: Push
   only:
-    - master
+    - main
   tags:
     - docker-builder-windows
     - amd64
