@@ -4,5 +4,7 @@ RUN dnf install -y \
     catch-devel \
     fmt-devel \
     glfw-devel \
+    glm-devel \
     vulkan-devel \
+    yaml-cpp-devel \
     && dnf clean all
