@@ -8,3 +8,5 @@ RUN dnf install -y \
     vulkan-devel \
     yaml-cpp-devel \
     && dnf clean all
+
+RUN pip install cmake-format[yaml]
