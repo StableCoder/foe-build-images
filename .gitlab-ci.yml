@@ -60,8 +60,7 @@ Windows Build:
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
   script:
     - cd $OS
-    - docker buildx build --push --pull ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile . || echo
-    - docker buildx build --push ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile .
+    - docker buildx build --pull --push ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile .
   after_script:
     - docker logout ${DOCKER_REGISTRY}
 
