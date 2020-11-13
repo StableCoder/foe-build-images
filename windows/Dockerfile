@@ -1,10 +1,15 @@
 FROM stabletec/build-core:windows
 
-COPY ps-scripts/powershell/windows-install/latest_versions.ps1 ps-scripts/
-
 # VulkanSDK
 COPY ps-scripts/powershell/windows-install/vulkan-sdk.ps1 ps-scripts/
-RUN cd ps-scripts; .\latest_versions.ps1; .\vulkan-sdk.ps1
+RUN cd ps-scripts; .\vulkan-sdk.ps1
+
+# VulkanRuntime
+COPY ps-scripts/powershell/windows-install/vulkan-runtime.ps1 ps-scripts/
+RUN cd ps-scripts; .\vulkan-runtime.ps1
+
+# Latest Versions
+COPY ps-scripts/powershell/windows-install/latest_versions.ps1 ps-scripts/
 
 # Catch2
 COPY ps-scripts/powershell/windows-install/catch.ps1 ps-scripts/
