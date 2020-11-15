@@ -5,6 +5,7 @@ RUN dnf install -y \
     fmt-devel \
     glfw-devel \
     glm-devel \
+    glslang \
     vulkan-devel \
     yaml-cpp-devel \
     && dnf clean all
