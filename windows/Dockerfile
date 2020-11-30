@@ -11,6 +11,10 @@ RUN cd ps-scripts; .\vulkan-runtime.ps1
 # Latest Versions
 COPY ps-scripts/powershell/windows-install/latest_versions.ps1 ps-scripts/
 
+# Assimp
+COPY ps-scripts/powershell/windows-install/assimp.ps1 ps-scripts/
+RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\assimp.ps1
+
 # Catch2
 COPY ps-scripts/powershell/windows-install/catch.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\catch.ps1

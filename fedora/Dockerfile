@@ -1,6 +1,7 @@
 FROM stabletec/build-core:fedora
 
 RUN dnf install -y \
+    assimp-devel \
     catch-devel \
     fmt-devel \
     glfw-devel \
