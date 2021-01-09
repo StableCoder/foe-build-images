@@ -35,9 +35,8 @@ Ubuntu Build:
     - docker-builder-linux
     - amd64
     - arm64
-    - armv7
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
+    PLATFORMS: "linux/amd64,linux/arm64"
     OS: ubuntu
   <<: *build_template
 
@@ -81,9 +80,8 @@ Ubuntu Push:
     - docker-builder-linux
     - amd64
     - arm64
-    - armv7
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
+    PLATFORMS: "linux/amd64,linux/arm64"
     OS: ubuntu
   <<: *push_template
 
