@@ -7,6 +7,7 @@ RUN apt install -y \
     libglfw3-dev \
     libglm-dev \
     libfmt-dev  \
+    libfreeimage-dev \
     libyaml-cpp-dev \
     && apt clean all
 

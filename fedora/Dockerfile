@@ -4,6 +4,7 @@ RUN dnf install -y \
     assimp-devel \
     catch-devel \
     fmt-devel \
+    freeimage-devel \
     glfw-devel \
     glm-devel \
     glslang \

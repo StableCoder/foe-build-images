@@ -31,6 +31,10 @@ RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\glfw.ps1
 COPY ps-scripts/powershell/windows-install/glm.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\glm.ps1
 
+# FreeImage
+COPY ps-scripts/powershell/windows-install/freeimage.ps1 ps-scripts/
+RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\freeimage.ps1
+
 # fmt
 COPY ps-scripts/powershell/windows-install/fmt.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\fmt.ps1
