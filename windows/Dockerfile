@@ -19,6 +19,10 @@ RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\openxr.ps1
 COPY ps-scripts/powershell/windows-install/assimp.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\assimp.ps1
 
+# Bullet Physics
+COPY ps-scripts/powershell/windows-install/bullet.ps1 ps-scripts/
+RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\bullet.ps1
+
 # Catch2
 COPY ps-scripts/powershell/windows-install/catch.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\catch.ps1

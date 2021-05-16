@@ -24,6 +24,7 @@ The Dockers images generated from this repository are used for building the FoE-
 ## Included Libraries
 
 - [Assimp](https://github.com/assimp/assimp)
+- [Bullet Physics](https://github.com/bulletphysics/bullet3)
 - [Catch](https://github.com/catchorg/Catch2)
 - [fmt](https://github.com/fmtlib/fmt)
 - [freeimage](https://freeimage.sourceforge.io/)
