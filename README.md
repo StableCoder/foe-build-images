@@ -23,6 +23,12 @@ The Dockers images generated from this repository are used for building the FoE-
 
 ## Included Libraries
 
+- [Assimp](https://github.com/assimp/assimp)
 - [Catch](https://github.com/catchorg/Catch2)
-- [Vulkan](https://www.khronos.org/vulkan/)
+- [fmt](https://github.com/fmtlib/fmt)
+- [freeimage](https://freeimage.sourceforge.io/)
 - [GLFW3](https://glfw.org)
+- [glm](https://github.com/g-truc/glm)
+- [OpenXR](https://www.khronos.org/OpenXR/)
+- [Vulkan](https://www.khronos.org/vulkan/)
+- [Yaml-cpp](https://github.com/jbeder/yaml-cpp)
