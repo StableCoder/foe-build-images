@@ -15,8 +15,7 @@ variables:
   except:
     - main
   script:
-    - cd $OS
-    - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t test:${OS} -f Dockerfile .
+    - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform $(cat $OS/.cfg) -t test:${OS} -f ${OS}/Dockerfile .
 
 Fedora Build:
   stage: Build
@@ -25,7 +24,6 @@ Fedora Build:
     - amd64
     - arm64
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64"
     OS: fedora
   <<: *build_template
 
@@ -35,8 +33,8 @@ Ubuntu Build:
     - docker-builder-linux
     - amd64
     - arm64
+    - riscv64
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64"
     OS: ubuntu
   <<: *build_template
 
@@ -58,8 +56,7 @@ Windows Build:
   before_script:
     - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
   script:
-    - cd $OS
-    - docker buildx build --pull --push ${EXTRA_BUILD_OPTIONS} --platform ${PLATFORMS} -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f Dockerfile .
+    - docker buildx build --pull --push ${EXTRA_BUILD_OPTIONS} --platform $(cat ${OS}/.cfg) -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f ${OS}/Dockerfile .
   after_script:
     - docker logout ${DOCKER_REGISTRY}
 
@@ -70,7 +67,6 @@ Fedora Push:
     - amd64
     - arm64
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64"
     OS: fedora
   <<: *push_template
 
@@ -80,8 +76,8 @@ Ubuntu Push:
     - docker-builder-linux
     - amd64
     - arm64
+    - riscv64
   variables:
-    PLATFORMS: "linux/amd64,linux/arm64"
     OS: ubuntu
   <<: *push_template
 
