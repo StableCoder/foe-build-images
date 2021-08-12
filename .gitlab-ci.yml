@@ -17,6 +17,15 @@ variables:
   script:
     - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform $(cat $OS/.cfg) -t test:${OS} -f ${OS}/Dockerfile .
 
+Arch/SteamOS Build:
+  stage: Build
+  tags:
+    - docker-builder-linux
+    - amd64
+  variables:
+    OS: arch
+  <<: *build_template
+
 Fedora Build:
   stage: Build
   tags:
@@ -59,6 +68,15 @@ Windows Build:
     - docker buildx build --pull --push ${EXTRA_BUILD_OPTIONS} --platform $(cat ${OS}/.cfg) -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f ${OS}/Dockerfile .
   after_script:
     - docker logout ${DOCKER_REGISTRY}
+
+Arch/SteamOS Push:
+  stage: Push
+  tags:
+    - docker-builder-linux
+    - amd64
+  variables:
+    OS: arch
+  <<: *push_template
 
 Fedora Push:
   stage: Push

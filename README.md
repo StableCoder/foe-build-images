@@ -9,17 +9,19 @@ The Dockers images generated from this repository are used for building the FoE-
 
 ## Supported tags and respective `Dockerfile` links
 
+- [`arch` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/arch/Dockerfile)
 - [`fedora` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/fedora/Dockerfile)
 - [`ubuntu` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/ubuntu/Dockerfile)
 - [`windows` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/windows/Dockerfile)
 
 ## Architecture Support
 
-| OS      | amd64 | arm64 | arm32v7 |
-| ------- | ----- | ----- | ------- |
-| Fedora  | X     | X     |         |
-| Ubtuntu | X     | X     | X       |
-| Windows | X     |       |         |
+| OS             | amd64 | arm64 | riscv64 |
+| -------------- | ----- | ----- | ------- |
+| Arch (SteamOS) | X     |       |         |
+| Fedora         | X     | X     |         |
+| Ubtuntu        | X     | X     | X       |
+| Windows        | X     |       |         |
 
 ## Included Libraries
 
