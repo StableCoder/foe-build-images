@@ -26,6 +26,15 @@ Arch/SteamOS Build:
     OS: arch
   <<: *build_template
 
+Debian Build:
+  stage: Build
+  tags:
+    - docker-builder-linux
+    - amd64
+  variables:
+    OS: debian
+  <<: *build_template
+
 Fedora Build:
   stage: Build
   tags:
@@ -76,6 +85,15 @@ Arch/SteamOS Push:
     - amd64
   variables:
     OS: arch
+  <<: *push_template
+
+Debian Push:
+  stage: Push
+  tags:
+    - docker-builder-linux
+    - amd64
+  variables:
+    OS: debian
   <<: *push_template
 
 Fedora Push:
