@@ -1,4 +1,4 @@
-FROM stabletec/build-core:ubuntu
+FROM docker.io/stabletec/build-core:ubuntu
 
 RUN apt install -y \
     glslang-tools \

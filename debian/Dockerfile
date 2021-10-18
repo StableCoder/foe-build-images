@@ -1,4 +1,4 @@
-FROM stabletec/build-core:debian
+FROM docker.io/stabletec/build-core:debian
 
 RUN apt install -y \
     glslang-tools \

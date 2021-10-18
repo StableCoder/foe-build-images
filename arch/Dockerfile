@@ -1,4 +1,4 @@
-FROM stabletec/build-core:arch
+FROM docker.io/stabletec/build-core:arch
 
 RUN pacman -Sy && \
     pacman -S --noconfirm \

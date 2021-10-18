@@ -1,4 +1,4 @@
-FROM stabletec/build-core:fedora
+FROM docker.io/stabletec/build-core:fedora
 
 RUN dnf install -y \
     assimp-devel \
