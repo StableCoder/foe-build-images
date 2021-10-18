@@ -1,6 +1,7 @@
 FROM docker.io/stabletec/build-core:ubuntu
 
-RUN apt install -y \
+RUN apt update \
+    && apt install -y \
     glslang-tools \
     libassimp-dev \
     libbullet-dev \
