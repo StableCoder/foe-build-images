@@ -6,52 +6,38 @@ stages:
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  DOCKER_REGISTRY: ''
   IMAGE_NAME: 'stabletec/build-foe'
 
 # Image Builds
 
 .build_image: &build_template
+  stage: Build
+  tags:
+    - container-builder
+    - linux
+    - podman
+    - qemu
   except:
     - main
   script:
-    - docker buildx build --pull ${EXTRA_BUILD_OPTIONS} --platform $(cat $OS/.cfg) -t test:${OS} -f ${OS}/Dockerfile .
+    - ./linux-build.sh $NO_CACHE --tag test-foe
 
 Arch/SteamOS Build:
-  stage: Build
-  tags:
-    - docker-builder-linux
-    - amd64
   variables:
     OS: arch
   <<: *build_template
 
 Debian Build:
-  stage: Build
-  tags:
-    - docker-builder-linux
-    - amd64
   variables:
     OS: debian
   <<: *build_template
 
 Fedora Build:
-  stage: Build
-  tags:
-    - docker-builder-linux
-    - amd64
-    - arm64
   variables:
     OS: fedora
   <<: *build_template
 
 Ubuntu Build:
-  stage: Build
-  tags:
-    - docker-builder-linux
-    - amd64
-    - arm64
-    - riscv64
   variables:
     OS: ubuntu
   <<: *build_template
@@ -69,50 +55,33 @@ Windows Build:
 # Image Push Stage
 
 .push_image: &push_template
-  only:
-    - main
-  before_script:
-    - docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
-  script:
-    - docker buildx build --pull --push ${EXTRA_BUILD_OPTIONS} --platform $(cat ${OS}/.cfg) -t ${DOCKER_REGISTRY}${IMAGE_NAME}:${OS} -f ${OS}/Dockerfile .
-  after_script:
-    - docker logout ${DOCKER_REGISTRY}
-
-Arch/SteamOS Push:
   stage: Push
   tags:
-    - docker-builder-linux
-    - amd64
+    - container-builder
+    - linux
+    - podman
+    - qemu
+  only:
+    - main
+  script:
+    - ./linux-build.sh $NO_CACHE --tag ${CORE_NAME} --push
+
+Arch/SteamOS Push:
   variables:
     OS: arch
   <<: *push_template
 
 Debian Push:
-  stage: Push
-  tags:
-    - docker-builder-linux
-    - amd64
   variables:
     OS: debian
   <<: *push_template
 
 Fedora Push:
-  stage: Push
-  tags:
-    - docker-builder-linux
-    - amd64
-    - arm64
   variables:
     OS: fedora
   <<: *push_template
 
 Ubuntu Push:
-  stage: Push
-  tags:
-    - docker-builder-linux
-    - amd64
-    - arm64
-    - riscv64
   variables:
     OS: ubuntu
   <<: *push_template
