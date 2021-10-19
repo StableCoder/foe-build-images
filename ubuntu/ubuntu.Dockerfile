@@ -13,7 +13,7 @@ RUN apt update \
     libyaml-cpp-dev \
     && apt clean all
 
-RUN git clone --branch release-1.0.16 https://github.com/KhronosGroup/OpenXR-SDK \
+RUN git clone --branch release-1.0.20 https://github.com/KhronosGroup/OpenXR-SDK \
     && cmake OpenXR-SDK -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -BOpenXR-SDK/build \
     && ninja -COpenXR-SDK/build \
     && ninja -COpenXR-SDK/build install
