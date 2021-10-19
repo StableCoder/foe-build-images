@@ -37,6 +37,11 @@ Fedora Build:
     OS: fedora
   <<: *build_template
 
+openSUSE Build:
+  variables:
+    OS: opensuse
+  <<: *build_template
+
 Ubuntu Build:
   variables:
     OS: ubuntu
@@ -79,6 +84,11 @@ Debian Push:
 Fedora Push:
   variables:
     OS: fedora
+  <<: *push_template
+
+openSUSE Push:
+  variables:
+    OS: opensuse
   <<: *push_template
 
 Ubuntu Push:
