@@ -64,7 +64,7 @@ Windows Build:
   only:
     - main
   script:
-    - ./linux-build.sh $NO_CACHE --tag ${CORE_NAME} --push
+    - ./linux-build.sh $NO_CACHE --tag ${IMAGE_NAME} --push
 
 Arch/SteamOS Push:
   variables:
