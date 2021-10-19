@@ -12,6 +12,7 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`arch` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/arch/Dockerfile)
 - [`debian` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/debian/Dockerfile)
 - [`fedora` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/fedora/Dockerfile)
+- [`opensuse` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/opensuse/Dockerfile)
 - [`ubuntu` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/ubuntu/Dockerfile)
 - [`windows` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/windows/Dockerfile)
 
@@ -22,6 +23,7 @@ The Dockers images generated from this repository are used for building the FoE-
 | Arch (SteamOS) | X     |       |         |
 | Debian         | X     |       |         |
 | Fedora         | X     | X     |         |
+| openSUSE       | X     | X     |         |
 | Ubtuntu        | X     | X     | X       |
 | Windows        | X     |       |         |
 
