@@ -9,6 +9,7 @@ RUN dnf install -y \
     glfw-devel \
     glm-devel \
     glslang \
+    openxr \
     openxr-devel \
     vulkan-devel \
     yaml-cpp-devel \
