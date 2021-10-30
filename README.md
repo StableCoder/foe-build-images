@@ -18,14 +18,14 @@ The Dockers images generated from this repository are used for building the FoE-
 
 ## Architecture Support
 
-| OS             | amd64 | arm64 | riscv64 |
-| -------------- | ----- | ----- | ------- |
-| Arch (SteamOS) | X     |       |         |
-| Debian         | X     |       |         |
-| Fedora         | X     | X     |         |
-| openSUSE       | X     | X     |         |
-| Ubtuntu        | X     | X     | X       |
-| Windows        | X     |       |         |
+| OS             | amd64 | arm64 | ppc64le | riscv64 |
+| -------------- | ----- | ----- | ------- | ------- |
+| Arch (SteamOS) | X     |       |         |         |
+| Debian         | X     |       | X       |         |
+| Fedora         | X     | X     | X       |         |
+| openSUSE       | X     | X     | X       |         |
+| Ubtuntu        | X     | X     | X       | X       |
+| Windows        | X     |       |         |         |
 
 ## Included Libraries
 
