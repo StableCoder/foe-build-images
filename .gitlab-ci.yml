@@ -103,9 +103,5 @@ Windows Push:
   tags:
     - docker-builder-windows
     - amd64
-  before_script:
-    - docker login -u $env:DOCKER_USER -p "$env:DOCKER_PASSWORD" $env:DOCKER_REGISTRY
   script:
     - cd windows; .\image_builder.ps1 -push -imagename ${env:DOCKER_REGISTRY}${env:IMAGE_NAME} -test
-  after_script:
-    - docker logout $env:DOCKER_REGISTRY
