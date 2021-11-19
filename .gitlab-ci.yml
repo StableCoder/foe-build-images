@@ -20,7 +20,7 @@ variables:
   except:
     - main
   script:
-    - ./linux-build.sh $NO_CACHE --tag test-foe
+    - ./linux-build.sh $NO_CACHE --tag test-foe --rm
 
 Arch/SteamOS Build:
   variables:
