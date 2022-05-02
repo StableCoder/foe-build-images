@@ -10,10 +10,12 @@ RUN apt update \
     libglm-dev \
     libfmt-dev \
     libfreeimage-dev \
+    libopenxr-dev \
     libyaml-cpp-dev \
     && apt clean all
 
-RUN git clone --branch release-1.0.20 https://github.com/KhronosGroup/OpenXR-SDK \
-    && cmake OpenXR-SDK -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -BOpenXR-SDK/build \
-    && ninja -COpenXR-SDK/build \
-    && ninja -COpenXR-SDK/build install
+# Manual needed for Ubuntu 20.04
+#RUN git clone --branch release-1.0.20 https://github.com/KhronosGroup/OpenXR-SDK \
+#    && cmake OpenXR-SDK -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -BOpenXR-SDK/build \
+#    && ninja -COpenXR-SDK/build \
+#    && ninja -COpenXR-SDK/build install
