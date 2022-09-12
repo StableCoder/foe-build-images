@@ -7,5 +7,5 @@ RUN pacman -S --noconfirm \
         # Library Dependencies 
         assimp portaudio bullet vulkan-headers fmt glm glfw freeimage catch2 yaml-cpp openxr glslang \
         # SW Vulkan Renderer
-        vulkan-swrast
+        vulkan-swrast vulkan-validation-layers
 RUN pacman -Scc
