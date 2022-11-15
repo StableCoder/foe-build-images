@@ -6,5 +6,5 @@ RUN pacman -Sy --noconfirm \
         # Dependencies 
         assimp portaudio bullet vulkan-headers fmt glm glfw freeimage catch2 yaml-cpp openxr glslang \
         # Vulkan
-        vulkan-intel vulkan-radeon vulkan-swrast vulkan-validation-layers \
+        vulkan-intel vulkan-radeon vulkan-swrast vulkan-tools vulkan-validation-layers \
         && pacman -Scc
