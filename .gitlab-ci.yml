@@ -20,7 +20,7 @@ variables:
   except:
     - main
   script:
-    - ./linux-build.sh $NO_CACHE --tag test-foe --rm
+    - ./linux-build.sh $NO_CACHE --tag build-foe-test --rm
 
 Arch/SteamOS Build:
   variables:
@@ -55,7 +55,7 @@ Windows Build:
     - docker-builder-windows
     - amd64
   script:
-    - cd windows; .\image_builder.ps1 -imagename test -test
+    - cd windows; .\image_builder.ps1 -imagename build-foe-test -test
 
 # Image Push Stage
 
