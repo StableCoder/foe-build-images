@@ -4,7 +4,24 @@ RUN pacman -Sy --noconfirm \
         # Additional Formatters
         shfmt autopep8 \
         # Dependencies 
-        assimp portaudio bullet vulkan-headers fmt glm glfw freeimage catch2 yaml-cpp openxr glslang \
+        assimp portaudio bullet vulkan-headers fmt glm glfw freeimage yaml-cpp openxr glslang \
         # Vulkan
         vulkan-intel vulkan-radeon vulkan-swrast vulkan-tools vulkan-validation-layers \
-        && pacman -Scc
+        && pacman -Scc --noconfirm
+
+# Catch 2 (v3)
+ENV CATCH2_VER=v3.3.2
+RUN curl -o catch2.tar.gz https://codeload.github.com/catchorg/Catch2/tar.gz/refs/tags/${CATCH2_VER} \
+        && tar -xf catch2.tar.gz \
+        && cd Catch2-* \
+        && cmake -B build -G Ninja \
+                -DCMAKE_INSTALL_PREFIX=/usr \
+                -DCMAKE_INSTALL_LIBDIR=lib \
+                -DCATCH_BUILD_EXAMPLES=OFF \
+                -DCATCH_ENABLE_COVERAGE=OFF \
+                -DCATCH_ENABLE_WERROR=OFF \
+                -DBUILD_TESTING=ON \
+        && cmake --build build \
+        && cmake --install build \
+        && cd .. \
+        && rm -rf Catch2-* catch2.tar.gz
