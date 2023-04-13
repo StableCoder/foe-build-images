@@ -24,7 +24,7 @@ The Dockers images generated from this repository are used for building the FoE-
 | Debian         | X     | X     | X       |         |
 | Fedora         | X     | X     | X       |         |
 | openSUSE       | X     | X     | X       |         |
-| Ubtuntu        | X     | X     | X       | X       |
+| Ubtuntu        | X     | X     | X       |         |
 | Windows        | X     |       |         |         |
 
 ## Included Libraries
@@ -36,6 +36,7 @@ The Dockers images generated from this repository are used for building the FoE-
 - [freeimage](https://freeimage.sourceforge.io/)
 - [GLFW3](https://glfw.org)
 - [glm](https://github.com/g-truc/glm)
+- [libsodium](https://doc.libsodium.org/)
 - [OpenXR](https://www.khronos.org/OpenXR/)
 - [Vulkan](https://www.khronos.org/vulkan/)
 - [Yaml-cpp](https://github.com/jbeder/yaml-cpp)

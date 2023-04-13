@@ -2,8 +2,8 @@ FROM docker.io/stabletec/build-core:opensuse
 
 RUN zypper install -y \
     # Dependencies
-    assimp-devel libbullet-devel fmt-devel freeimage-devel \
-    libglfw-devel glm-devel glslang-devel vulkan-devel yaml-cpp-devel \
+    assimp-devel fmt-devel freeimage-devel glm-devel glslang-devel libbullet-devel  \
+    libglfw-devel libsodium-devel vulkan-devel yaml-cpp-devel \
     # Vulkan
     $(if [ `uname -m` == "amd64" ]; then echo "libvulkan_intel libvulkan_lvp libvulkan_radeon"; fi) vulkan-tools vulkan-validationlayers \
     # Other

@@ -46,3 +46,7 @@ RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\fmt.ps1
 # yaml-cpp
 COPY ps-scripts/powershell/windows-install/yaml-cpp.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\yaml-cpp.ps1
+
+# libsodium
+COPY ps-scripts/powershell/windows-install/libsodium.ps1 ps-scripts/
+RUN cd ps-scripts; .\entrypoint.ps1; .\latest_versions.ps1; .\libsodium.ps1

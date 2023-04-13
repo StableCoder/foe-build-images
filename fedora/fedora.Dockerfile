@@ -4,6 +4,7 @@ RUN dnf install -y \
     # Dependencies
     assimp-devel bullet-devel fmt-devel freeimage-devel \
     glfw-devel glm-devel glslang openxr openxr-devel vulkan-devel yaml-cpp-devel \
+    libsodium-devel \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
     && dnf clean all
