@@ -14,7 +14,7 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`fedora` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/fedora/Dockerfile)
 - [`opensuse` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/opensuse/Dockerfile)
 - [`ubuntu` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/ubuntu/Dockerfile)
-- [`windows` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/windows/Dockerfile)
+- [`windows-2019`, `windows-2022`, `windows` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/windows/Dockerfile)
 
 ## Architecture Support
 

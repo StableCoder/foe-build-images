@@ -55,7 +55,7 @@ Windows Build:
     - docker-builder-windows
     - amd64
   script:
-    - cd windows; .\image_builder.ps1 -imagename build-foe-test -test
+    - cd windows; .\image_builder.ps1 -ImageName build-foe-test -Test
 
 # Image Push Stage
 
@@ -104,4 +104,4 @@ Windows Push:
     - docker-builder-windows
     - amd64
   script:
-    - cd windows; .\image_builder.ps1 -push -imagename ${env:DOCKER_REGISTRY}${env:IMAGE_NAME} -test
+    - cd windows; .\image_builder.ps1 -ImageName ${env:IMAGE_NAME} -Test -Push
