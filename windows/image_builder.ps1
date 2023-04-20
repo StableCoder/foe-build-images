@@ -22,8 +22,8 @@ try {
 
         Write-Host ">> Working on ${ImageName}:${TAG} <<"
 
-        Write-Host ">> docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 6GB ." -ForegroundColor Yellow
-        docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 6GB .
+        Write-Host ">> docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 8GB ." -ForegroundColor Yellow
+        docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 8GB .
         if ($LastExitCode -ne 0) { throw }
 
         if($Test) {
