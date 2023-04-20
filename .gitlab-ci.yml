@@ -1,4 +1,5 @@
-# Global
+# Optional Environment Variables
+# IMAGE_NAME - The main name of the image, to override the original name.
 
 stages:
   - Build
@@ -52,7 +53,8 @@ Windows Build:
   except:
     - main
   tags:
-    - docker-builder-windows
+    - container-builder
+    - windows
     - amd64
   script:
     - cd windows; .\image_builder.ps1 -ImageName build-foe-test -Test
@@ -101,7 +103,8 @@ Windows Push:
   only:
     - main
   tags:
-    - docker-builder-windows
+    - container-builder
+    - windows
     - amd64
   script:
     - cd windows; .\image_builder.ps1 -ImageName ${env:IMAGE_NAME} -Test -Push
