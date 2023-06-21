@@ -4,7 +4,7 @@ RUN pacman -Sy --noconfirm \
         # Additional Formatters
         shfmt autopep8 \
         # Dependencies 
-        assimp bullet fmt freeimage glfw glm glslang libsodium openxr portaudio vulkan-headers yaml-cpp \
+        assimp bullet fmt freeimage glfw glm glslang libevent libsodium openxr portaudio vulkan-headers yaml-cpp \
         # Vulkan
         vulkan-intel vulkan-radeon vulkan-swrast vulkan-tools vulkan-validation-layers \
         && pacman -Scc --noconfirm

@@ -3,8 +3,8 @@ FROM docker.io/stabletec/build-core:ubuntu
 RUN apt update \
     && apt install -y \
     # Dependencies
-    glslang-tools libassimp-dev libbullet-dev libglfw3-dev libglm-dev libfmt-dev libfreeimage-dev \
-    libopenxr-dev libsodium-dev libvulkan-dev libyaml-cpp-dev \
+    glslang-tools libassimp-dev libbullet-dev libevent-dev libfmt-dev libfreeimage-dev \
+    libglfw3-dev libglm-dev libopenxr-dev libsodium-dev libvulkan-dev libyaml-cpp-dev \
     # Vulkan
     $(if [ `uname -m` != "riscv64" ]; then echo "mesa-vulkan-drivers"; fi) vulkan-tools vulkan-validationlayers \
     # Other

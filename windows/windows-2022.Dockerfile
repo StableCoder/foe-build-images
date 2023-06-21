@@ -47,3 +47,7 @@ RUN cd ps-scripts; .\entrypoint.ps1 -Quiet; .\yaml-cpp.ps1
 # libsodium
 COPY ps-scripts/powershell/windows-install/libsodium.ps1 ps-scripts/
 RUN cd ps-scripts; .\entrypoint.ps1 -Quiet; .\libsodium.ps1
+
+# libevent
+COPY ps-scripts/powershell/windows-install/libevent.ps1 ps-scripts/
+RUN cd ps-scripts; .\entrypoint.ps1 -Quiet; .\libevent.ps1

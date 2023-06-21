@@ -3,9 +3,9 @@ FROM docker.io/stabletec/build-core:debian
 RUN apt update \
     && apt install -y \
     # Dependencies
-    glslang-tools libassimp-dev libbullet-dev libfmt-dev libfreeimage-dev \
-    libglfw3-dev libglm-dev libopenxr-dev libsodium-dev libvulkan-dev \
-    libyaml-cpp-dev \
+    glslang-tools libassimp-dev libbullet-dev libevent-dev libfmt-dev  \
+    libfreeimage-dev libglfw3-dev libglm-dev libopenxr-dev libsodium-dev \
+    libvulkan-dev libyaml-cpp-dev \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validationlayers \
     # Other
