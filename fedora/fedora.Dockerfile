@@ -7,6 +7,8 @@ RUN dnf install -y \
     vulkan-devel yaml-cpp-devel libsodium-devel \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
+    # Other
+    python-pip \
     && dnf clean all
 
 RUN pip install cmake-format[yaml]

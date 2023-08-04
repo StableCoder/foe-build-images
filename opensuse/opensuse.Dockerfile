@@ -7,7 +7,7 @@ RUN zypper install -y \
     # Vulkan
     $(if [ `uname -m` == "amd64" ]; then echo "libvulkan_intel libvulkan_lvp libvulkan_radeon"; fi) vulkan-tools vulkan-validationlayers \
     # Other
-    tar gzip \
+    curl tar gzip \
     && zypper clean --all
 
 # OpenXR SDK
