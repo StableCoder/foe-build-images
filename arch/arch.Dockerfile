@@ -1,8 +1,6 @@
 FROM docker.io/stabletec/build-core:arch
 
 RUN pacman -Sy --noconfirm \
-        # Additional Formatters
-        shfmt autopep8 \
         # Dependencies 
         assimp bullet fmt freeimage glfw glm glslang libevent libsodium openxr portaudio vulkan-headers yaml-cpp \
         # Vulkan

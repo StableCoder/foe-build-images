@@ -8,10 +8,10 @@ RUN dnf install -y \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
     # Other
-    python-pip \
+    python3-pip python3-autopep8 shfmt \
     && dnf clean all
 
-RUN pip install cmake-format[yaml]
+RUN pip3 install cmake-format[yaml]
 
 # Catch 2 (v3)
 ENV CATCH2_VER=v3.3.2
