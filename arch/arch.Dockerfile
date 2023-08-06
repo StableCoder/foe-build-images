@@ -8,7 +8,7 @@ RUN pacman -Sy --noconfirm \
         && pacman -Scc --noconfirm
 
 # Catch 2 (v3)
-ENV CATCH2_VER=v3.3.2
+ENV CATCH2_VER=v3.4.0
 RUN curl -o catch2.tar.gz https://codeload.github.com/catchorg/Catch2/tar.gz/refs/tags/${CATCH2_VER} \
         && tar -xf catch2.tar.gz \
         && cd Catch2-* \
