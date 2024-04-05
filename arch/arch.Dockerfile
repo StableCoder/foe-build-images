@@ -1,3 +1,4 @@
+# PLATFORMS: linux/amd64
 FROM docker.io/stabletec/build-core:arch
 
 RUN pacman -Sy --noconfirm \
