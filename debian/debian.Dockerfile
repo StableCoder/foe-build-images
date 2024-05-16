@@ -14,7 +14,7 @@ RUN apt update \
     && apt clean all
 
 # Catch 2 (v3)
-ENV CATCH2_VER=v3.4.0
+ENV CATCH2_VER=v3.6.0
 RUN curl -o catch2.tar.gz https://codeload.github.com/catchorg/Catch2/tar.gz/refs/tags/${CATCH2_VER} \
         && tar -xf catch2.tar.gz \
         && cd Catch2-* \
