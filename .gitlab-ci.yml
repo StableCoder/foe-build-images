@@ -23,6 +23,22 @@ variables:
   script:
     - ./linux-build.sh $NO_CACHE --tag build-foe-test --rm
 
+.windows_build_template: &windows_build_template
+  stage: Build
+  tags:
+    - container-builder
+    - windows
+    - amd64
+    - ${WINDOWS_CONTAINER_BASE_VERSION}
+  except:
+    refs:
+      - main
+  script:
+    - if ($env:NO_CACHE) { $env:NO_CACHE = "-NoCache" }
+    - New-Item -Path $env:IMAGE_DIR/install-scripts -Type Directory
+    - Copy-Item windows-install-scripts/* -Destination $env:IMAGE_DIR/install-scripts -Recurse
+    - ./build-windows.ps1 $env:NO_CACHE -ImageName build-foe-test -ImageDir $env:IMAGE_DIR -Test
+
 Arch/SteamOS Build:
   variables:
     OS: arch
@@ -48,16 +64,17 @@ Ubuntu Build:
     OS: ubuntu
   <<: *build_template
 
-Windows Build:
-  stage: Build
-  except:
-    - main
-  tags:
-    - container-builder
-    - windows
-    - amd64
-  script:
-    - cd windows; .\image_builder.ps1 -ImageName build-foe-test -Test
+Windows Build (2019):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
+    IMAGE_DIR: windows-ltsc2019
+  <<: *windows_build_template
+
+Windows Build (2022):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
+    IMAGE_DIR: windows-ltsc2022
+  <<: *windows_build_template
 
 # Image Push Stage
 
@@ -72,6 +89,22 @@ Windows Build:
     - main
   script:
     - ./linux-build.sh $NO_CACHE --tag ${IMAGE_NAME} --push
+
+.windows_push_template: &windows_push_template
+  stage: Push
+  tags:
+    - container-builder
+    - windows
+    - amd64
+    - ${WINDOWS_CONTAINER_BASE_VERSION}
+  only:
+    refs:
+      - main
+  script:
+    - if ($env:NO_CACHE) { $env:NO_CACHE = "-NoCache" }
+    - New-Item -Path $env:IMAGE_DIR/install-scripts -Type Directory
+    - Copy-Item windows-install-scripts/* -Destination $env:IMAGE_DIR/install-scripts -Recurse
+    - ./build-windows.ps1 $env:NO_CACHE -ImageDir $env:IMAGE_DIR -ImageName $env:IMAGE_NAME -Test -Push
 
 Arch/SteamOS Push:
   variables:
@@ -98,13 +131,14 @@ Ubuntu Push:
     OS: ubuntu
   <<: *push_template
 
-Windows Push:
-  stage: Push
-  only:
-    - main
-  tags:
-    - container-builder
-    - windows
-    - amd64
-  script:
-    - cd windows; .\image_builder.ps1 -ImageName ${env:IMAGE_NAME} -Test -Push
+Windows Push (2019):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
+    IMAGE_DIR: windows-ltsc2019
+  <<: *windows_push_template
+
+Windows Push (2022):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
+    IMAGE_DIR: windows-ltsc2022
+  <<: *windows_push_template

@@ -1,10 +1,15 @@
 Param(
     [string] $ImageName, # Core name of the image
+    [string] $ImageDir, # Name of the directory with the dockerfiles
     [switch] $NoCache, # --no-cache mode
     [switch] $Test, # Test the image
     [switch] $Push, # Pushes the image (must be logged in previously)
     [switch] $Remove # Removes/untags image after (for testing purposes)
 )
+
+if($ImageDir) {
+    cd "$ImageDir"
+}
 
 if($NoCache) {
     $NO_CACHE="--no-cache"
@@ -22,8 +27,8 @@ try {
 
         Write-Host ">> Working on ${ImageName}:${TAG} <<"
 
-        Write-Host ">> docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 8GB ." -ForegroundColor Yellow
-        docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} -m 8GB .
+        Write-Host ">> docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} ." -ForegroundColor Yellow
+        docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} .
         if ($LastExitCode -ne 0) { throw }
 
         if($Test) {
