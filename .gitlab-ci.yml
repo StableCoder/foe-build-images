@@ -6,7 +6,6 @@ stages:
   - Push
 
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
   IMAGE_NAME: 'stabletec/build-foe'
 
 # Image Builds
