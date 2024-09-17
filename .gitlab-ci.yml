@@ -21,7 +21,7 @@ variables:
     refs:
       - main
   script:
-    - ./linux-build.sh $NO_CACHE --tag build-foe-test --rm
+    - ./build-linux.sh $NO_CACHE --image-dir $IMAGE_DIR --tag build-foe-test --rm
 
 .windows_build_template: &windows_build_template
   stage: Build
@@ -41,27 +41,27 @@ variables:
 
 Arch/SteamOS Build:
   variables:
-    OS: arch
+    IMAGE_DIR: arch
   <<: *linux_build_template
 
 Debian Build:
   variables:
-    OS: debian
+    IMAGE_DIR: debian
   <<: *linux_build_template
 
 Fedora Build:
   variables:
-    OS: fedora
+    IMAGE_DIR: fedora
   <<: *linux_build_template
 
 openSUSE Build:
   variables:
-    OS: opensuse
+    IMAGE_DIR: opensuse
   <<: *linux_build_template
 
 Ubuntu Build:
   variables:
-    OS: ubuntu
+    IMAGE_DIR: ubuntu
   <<: *linux_build_template
 
 MSYS Build (2019):
@@ -101,7 +101,7 @@ Windows Build (2022):
     refs:
       - main
   script:
-    - ./linux-build.sh $NO_CACHE --tag ${IMAGE_NAME} --push
+    - ./build-linux.sh $NO_CACHE --image-dir $IMAGE_DIR --tag ${IMAGE_NAME} --push
 
 .windows_push_template: &windows_push_template
   stage: Push
@@ -121,27 +121,27 @@ Windows Build (2022):
 
 Arch/SteamOS Push:
   variables:
-    OS: arch
+    IMAGE_DIR: arch
   <<: *linux_push_template
 
 Debian Push:
   variables:
-    OS: debian
+    IMAGE_DIR: debian
   <<: *linux_push_template
 
 Fedora Push:
   variables:
-    OS: fedora
+    IMAGE_DIR: fedora
   <<: *linux_push_template
 
 openSUSE Push:
   variables:
-    OS: opensuse
+    IMAGE_DIR: opensuse
   <<: *linux_push_template
 
 Ubuntu Push:
   variables:
-    OS: ubuntu
+    IMAGE_DIR: ubuntu
   <<: *linux_push_template
 
 MSYS Push (2019):
