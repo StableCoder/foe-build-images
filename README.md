@@ -9,12 +9,13 @@ The Dockers images generated from this repository are used for building the FoE-
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`arch` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/arch/Dockerfile)
-- [`debian` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/debian/Dockerfile)
-- [`fedora` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/fedora/Dockerfile)
-- [`opensuse` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/opensuse/Dockerfile)
-- [`ubuntu` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/ubuntu/Dockerfile)
-- [`windows-2019`, `windows-2022`, `windows` (Dockerfile)](https://git.stabletec.com/foe/build-images/blob/main/windows/Dockerfile)
+- [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/Dockerfile)
+- [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/Dockerfile)
+- [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/Dockerfile)
+- [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/Dockerfile)
+- [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/Dockerfile)
+- [`windows-ltsc2019`, `windows-ltsc2019-vs2022`, `windows-ltsc2019-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2019/)
+- [`windows`, `windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
 
 ## Architecture Support
 
