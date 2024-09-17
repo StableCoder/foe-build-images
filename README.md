@@ -1,7 +1,7 @@
 # FoE Build Images
 
 [![pipeline status](https://git.stabletec.com/foe/build-images/badges/main/pipeline.svg)](https://git.stabletec.com/foe/build-images/commits/main)
-[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://git.stabletec.com/foe/build-images/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/StableCoder/foe-build-images/tree/main/LICENSE)
 [![docker pulls](https://img.shields.io/docker/pulls/stabletec/build-foe.svg)](https://hub.docker.com/r/stabletec/build-foe/)
 [![docker stars](https://img.shields.io/docker/stars/stabletec/build-foe.svg)](https://hub.docker.com/r/stabletec/build-foe/)
 
@@ -9,11 +9,13 @@ The Dockers images generated from this repository are used for building the FoE-
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/Dockerfile)
-- [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/Dockerfile)
-- [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/Dockerfile)
-- [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/Dockerfile)
-- [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/Dockerfile)
+- [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/)
+- [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/)
+- [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/)
+- [`msys-ltsc2019-clang64`, `msys-ltsc2019-mingw64`, `msys-ltsc2019-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2019)
+- [`msys-ltsc2022-clang64`, `msys-ltsc2022-mingw64`, `msys-ltsc2022-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022)
+- [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/)
+- [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/)
 - [`windows-ltsc2019`, `windows-ltsc2019-vs2022`, `windows-ltsc2019-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2019/)
 - [`windows`, `windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
 
@@ -24,6 +26,7 @@ The Dockers images generated from this repository are used for building the FoE-
 | Arch (SteamOS) | X     |       |         |         |
 | Debian         | X     | X     | X       |         |
 | Fedora         | X     | X     | X       |         |
+| MSYS/MinGW     | X     |       |         |         |
 | openSUSE       | X     | X     | X       |         |
 | Ubtuntu        | X     | X     | X       |         |
 | Windows        | X     |       |         |         |

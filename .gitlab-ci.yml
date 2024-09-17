@@ -64,6 +64,18 @@ Ubuntu Build:
     OS: ubuntu
   <<: *linux_build_template
 
+MSYS Build (2019):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
+    IMAGE_DIR: msys-ltsc2019
+  <<: *windows_build_template
+
+MSYS Build (2022):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
+    IMAGE_DIR: msys-ltsc2022
+  <<: *windows_build_template
+
 Windows Build (2019):
   variables:
     WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
@@ -131,6 +143,18 @@ Ubuntu Push:
   variables:
     OS: ubuntu
   <<: *linux_push_template
+
+MSYS Push (2019):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
+    IMAGE_DIR: msys-ltsc2019
+  <<: *windows_push_template
+
+MSYS Push (2022):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
+    IMAGE_DIR: msys-ltsc2022
+  <<: *windows_push_template
 
 Windows Push (2019):
   variables:
