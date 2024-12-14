@@ -14,10 +14,12 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/)
 - [`msys-ltsc2019-clang64`, `msys-ltsc2019-mingw64`, `msys-ltsc2019-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2019)
 - [`msys-ltsc2022-clang64`, `msys-ltsc2022-mingw64`, `msys-ltsc2022-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022)
+- [`msys-ltsc2025-clang64`, `msys-ltsc2025-mingw64`, `msys-ltsc2025-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025)
 - [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/)
 - [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/)
 - [`windows-ltsc2019`, `windows-ltsc2019-vs2022`, `windows-ltsc2019-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2019/)
-- [`windows`, `windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
+- [`windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
+- [`windows`, `windows-ltsc2025`, `windows-ltsc2025-vs2022`, `windows-ltsc2025-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/)
 
 ## Architecture Support
 
@@ -28,8 +30,9 @@ The Dockers images generated from this repository are used for building the FoE-
 | Fedora         | X     | X     | X       | X     |         |
 | MSYS/MinGW     | X     |       |         |       |         |
 | openSUSE       | X     | X     | X       | X     |         |
-| Ubtuntu        | X     | X     | X       | X     |         |
+| Ubtuntu        | X     | X     | X       | X     | X       |
 | Windows        | X     |       |         |       |         |
+| MSYS/MinGW     | X     |       |         |       |         |
 
 ## Included Libraries
 

@@ -6,7 +6,7 @@ stages:
   - Push
 
 variables:
-  IMAGE_NAME: 'stabletec/build-foe'
+  IMAGE_NAME: "stabletec/build-foe"
 
 # Image Builds
 
@@ -76,6 +76,12 @@ MSYS Build (2022):
     IMAGE_DIR: msys-ltsc2022
   <<: *windows_build_template
 
+MSYS Build (2025):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2025
+    IMAGE_DIR: msys-ltsc2025
+  <<: *windows_build_template
+
 Windows Build (2019):
   variables:
     WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
@@ -86,6 +92,12 @@ Windows Build (2022):
   variables:
     WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
     IMAGE_DIR: windows-ltsc2022
+  <<: *windows_build_template
+
+Windows Build (2025):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2025
+    IMAGE_DIR: windows-ltsc2025
   <<: *windows_build_template
 
 # Image Push Stage
@@ -156,6 +168,12 @@ MSYS Push (2022):
     IMAGE_DIR: msys-ltsc2022
   <<: *windows_push_template
 
+MSYS Push (2025):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2025
+    IMAGE_DIR: msys-ltsc2025
+  <<: *windows_push_template
+
 Windows Push (2019):
   variables:
     WINDOWS_CONTAINER_BASE_VERSION: ltsc2019
@@ -166,4 +184,10 @@ Windows Push (2022):
   variables:
     WINDOWS_CONTAINER_BASE_VERSION: ltsc2022
     IMAGE_DIR: windows-ltsc2022
+  <<: *windows_push_template
+
+Windows Push (2025):
+  variables:
+    WINDOWS_CONTAINER_BASE_VERSION: ltsc2025
+    IMAGE_DIR: windows-ltsc2025
   <<: *windows_push_template
