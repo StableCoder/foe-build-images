@@ -1,4 +1,4 @@
-# PLATFORMS: linux/amd64 linux/arm64 linux/ppc64le linux/s390x
+# PLATFORMS: linux/amd64 linux/arm64 linux/ppc64le linux/s390x linux/riscv64
 FROM docker.io/stabletec/build-core:ubuntu
 
 RUN apt update \
