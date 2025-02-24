@@ -6,7 +6,7 @@ RUN cd install-scripts; ./vulkan-sdk.ps1
 
 # VulkanRuntime
 COPY install-scripts/vulkan-runtime.ps1 install-scripts/
-RUN cd install-scripts; ./vulkan-runtime.ps1
+RUN cd install-scripts; ./vulkan-runtime.ps1 -Version 1.4.304.0
 
 # OpenXR
 COPY install-scripts/openxr.ps1 install-scripts/
