@@ -1,4 +1,4 @@
-# Copyright (C) 2019-2024 George Cave.
+# Copyright (C) 2019-2025 George Cave.
 #
 # SPDX-License-Identifier: Apache-2.0
 Param(
@@ -18,7 +18,7 @@ try {
     # Download/Extract the source code
     Write-Host "Downloading/extracting source"
     $ProgressPreference = 'SilentlyContinue'
-    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
+    [Net.ServicePointManager]::SecurityProtocol = "tls13, tls12"
     Invoke-WebRequest -Uri https://github.com/jbeder/yaml-cpp/archive/refs/tags/${Version}.zip -OutFile yaml-cpp-${Version}.zip -UseBasicParsing
     7z x -aoa yaml-cpp-${Version}.zip
     cd yaml-cpp-${Version}

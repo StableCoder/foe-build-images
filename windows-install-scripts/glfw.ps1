@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2024 George Cave.
+# Copyright (C) 2018-2025 George Cave.
 #
 # SPDX-License-Identifier: Apache-2.0
 Param(
@@ -18,7 +18,7 @@ try {
     # Download/Extract the source code
     Write-Host "Downloading/extracting source"
     $ProgressPreference = 'SilentlyContinue'
-    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
+    [Net.ServicePointManager]::SecurityProtocol = "tls13, tls12"
     Invoke-WebRequest -Uri https://github.com/glfw/glfw/releases/download/${Version}/glfw-${Version}.zip -OutFile glfw-${Version}.zip -UseBasicParsing
     7z x glfw-${Version}.zip
     Remove-Item -Path glfw-${Version}.zip -Recurse -ErrorAction SilentlyContinue

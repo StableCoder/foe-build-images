@@ -1,9 +1,9 @@
-# Copyright (C) 2018-2024 George Cave.
+# Copyright (C) 2018-2025 George Cave.
 #
 # SPDX-License-Identifier: Apache-2.0
 try {
     $ProgressPreference = 'SilentlyContinue'
-    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
+    [Net.ServicePointManager]::SecurityProtocol = "tls13, tls12"
     Invoke-WebRequest -Uri https://sdk.lunarg.com/sdk/download/latest/windows/vulkan-sdk.exe?Human=true -OutFile VulkanSDK.exe -UseBasicParsing
     ./VulkanSDK.exe --root C:/VulkanSDK --accept-licenses --default-answer --confirm-command install | Out-Null
     Remove-Item VulkanSDK.exe
