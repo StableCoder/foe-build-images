@@ -17,7 +17,6 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`msys-ltsc2025-clang64`, `msys-ltsc2025-mingw64`, `msys-ltsc2025-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025)
 - [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/)
 - [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/)
-- [`windows-ltsc2019`, `windows-ltsc2019-vs2022`, `windows-ltsc2019-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2019/)
 - [`windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
 - [`windows`, `windows-ltsc2025`, `windows-ltsc2025-vs2022`, `windows-ltsc2025-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/)
 
