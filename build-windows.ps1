@@ -27,8 +27,8 @@ try {
 
         Write-Host ">> Working on ${ImageName}:${TAG} <<"
 
-        Write-Host ">> docker build --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} ." -ForegroundColor Yellow
-        docker build $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} .
+        Write-Host ">> docker build --isolation=process --pull $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} ." -ForegroundColor Yellow
+        docker build --isolation=process $NO_CACHE -t ${ImageName}:${TAG} -f ${FILE} .
         if ($LastExitCode -ne 0) { throw }
 
         if($Test) {
