@@ -12,7 +12,6 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/)
 - [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/)
 - [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/)
-- [`msys-ltsc2019-clang64`, `msys-ltsc2019-mingw64`, `msys-ltsc2019-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2019)
 - [`msys-ltsc2022-clang64`, `msys-ltsc2022-mingw64`, `msys-ltsc2022-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022)
 - [`msys-ltsc2025-clang64`, `msys-ltsc2025-mingw64`, `msys-ltsc2025-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025)
 - [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/)
@@ -31,7 +30,6 @@ The Dockers images generated from this repository are used for building the FoE-
 | openSUSE       | X     | X     | X       | X     |         |
 | Ubtuntu        | X     | X     | X       | X     | X       |
 | Windows        | X     |       |         |       |         |
-| MSYS/MinGW     | X     |       |         |       |         |
 
 ## Included Libraries
 
