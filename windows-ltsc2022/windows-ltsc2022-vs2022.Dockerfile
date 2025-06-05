@@ -3,11 +3,11 @@ FROM stabletec/build-core:windows-ltsc2022-vs2022
 
 # VulkanSDK
 COPY windows-install-scripts/vulkan-sdk.ps1 install-scripts/
-RUN cd install-scripts; ./vulkan-sdk.ps1
+RUN cd install-scripts; ./vulkan-sdk.ps1 -Version 1.4.313.1
 
 # VulkanRuntime
 COPY windows-install-scripts/vulkan-runtime.ps1 install-scripts/
-RUN cd install-scripts; ./vulkan-runtime.ps1
+RUN cd install-scripts; ./vulkan-runtime.ps1 -Version 1.4.313.0
 
 # OpenXR
 COPY windows-install-scripts/openxr.ps1 install-scripts/
