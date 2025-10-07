@@ -3,8 +3,8 @@ FROM docker.io/stabletec/build-core:fedora
 
 RUN dnf install -y \
     # Dependencies
-    assimp-devel bullet-devel catch-devel fmt-devel freeimage-devel \
-    glfw-devel glm-devel glslang libevent-devel openxr openxr-devel \
+    assimp-devel bullet-devel catch-devel fmt-devel glfw-devel \
+    glm-devel glslang libevent-devel ImageMagick-devel openxr-devel \
     vulkan-devel yaml-cpp-devel libsodium-devel \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
