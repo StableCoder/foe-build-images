@@ -60,7 +60,7 @@ Arch Build:
 Debian Build:
   parallel:
     matrix:
-    - ARCH: [amd64, arm64, ppc64le, s390x]
+    - ARCH: [amd64, arm64, ppc64le, s390x, riscv64]
       DOCKERFILE: [debian/debian.Dockerfile]
   <<: *linux_build_template
 
@@ -74,7 +74,7 @@ Fedora Build:
 openSUSE Build:
   parallel:
     matrix:
-    - ARCH: [amd64, arm64, ppc64le, s390x]
+    - ARCH: [amd64, arm64, ppc64le]
       DOCKERFILE: [opensuse/opensuse.Dockerfile]
   <<: *linux_build_template
 
@@ -153,7 +153,7 @@ Arch Push:
 Debian Push:
   parallel:
     matrix:
-    - ARCHITECTURES: "amd64 arm64 ppc64le s390x"
+    - ARCHITECTURES: "amd64 arm64 ppc64le s390x riscv64"
       DOCKERFILE: [debian/debian.Dockerfile]
   <<: *push_template
 
@@ -167,7 +167,7 @@ Fedora Push:
 openSUSE Push:
   parallel:
     matrix:
-    - ARCHITECTURES: "amd64 arm64 ppc64le s390x"
+    - ARCHITECTURES: "amd64 arm64 ppc64le"
       DOCKERFILE: [opensuse/opensuse.Dockerfile]
   <<: *push_template
 
