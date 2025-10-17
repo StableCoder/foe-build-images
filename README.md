@@ -7,17 +7,23 @@
 
 The Dockers images generated from this repository are used for building the FoE-Engine project.
 
-## Supported tags and respective `Dockerfile` links
+## Current tags and respective `Dockerfile` links
 
-- [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/)
-- [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/)
-- [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/)
-- [`msys-ltsc2022-clang64`, `msys-ltsc2022-mingw64`, `msys-ltsc2022-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022)
-- [`msys-ltsc2025-clang64`, `msys-ltsc2025-mingw64`, `msys-ltsc2025-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025)
-- [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/)
-- [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/)
-- [`windows-ltsc2022`, `windows-ltsc2022-vs2022`, `windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/)
-- [`windows`, `windows-ltsc2025`, `windows-ltsc2025-vs2022`, `windows-ltsc2025-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/)
+- [`arch` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/arch/arch.Dockerfile)
+- [`debian` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/debian/debian.Dockerfile)
+- [`fedora` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/fedora/fedora.Dockerfile)
+- [`msys-ltsc2022-clang64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022/msys-ltsc2022-clang64.Dockerfile)
+- [`msys-ltsc2022-mingw64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022/msys-ltsc2022-mingw64.Dockerfile)
+- [`msys-ltsc2022-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2022/msys-ltsc2022-ucrt64.Dockerfile)
+- [`msys-ltsc2025-clang64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025/msys-ltsc2025-clang64.Dockerfile)
+- [`msys-ltsc2025-mingw64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025/msys-ltsc2025-mingw64.Dockerfile)
+- [`msys-ltsc2025-ucrt64` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/msys-ltsc2025/msys-ltsc2025-ucrt64.Dockerfile)
+- [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/opensuse.Dockerfile)
+- [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/ubuntu.Dockerfile)
+- [`windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2019.Dockerfile)
+- [`windows-ltsc2022-vs2022`, `windows-ltsc2022` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2022.Dockerfile)
+- [`windows-ltsc2025-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2019.Dockerfile)
+- [`windows-ltsc2025-vs2022`, `windows-ltsc2025`, `windows` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2022.Dockerfile)
 
 ## Architecture Support
 
