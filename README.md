@@ -21,9 +21,11 @@ The Dockers images generated from this repository are used for building the FoE-
 - [`opensuse` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/opensuse/opensuse.Dockerfile)
 - [`ubuntu` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/ubuntu/ubuntu.Dockerfile)
 - [`windows-ltsc2022-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2019.Dockerfile)
-- [`windows-ltsc2022-vs2022`, `windows-ltsc2022` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2022.Dockerfile)
+- [`windows-ltsc2022-vs2022` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2022.Dockerfile)
+- [`windows-ltsc2022-vs2026`, `windows-ltsc2022` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2022/windows-ltsc2022-vs2026.Dockerfile)
 - [`windows-ltsc2025-vs2019` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2019.Dockerfile)
-- [`windows-ltsc2025-vs2022`, `windows-ltsc2025`, `windows` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2022.Dockerfile)
+- [`windows-ltsc2025-vs2022` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2022.Dockerfile)
+- [`windows-ltsc2025-vs2026`, `windows-ltsc2025`, `windows` (Dockerfile)](https://github.com/StableCoder/foe-build-images/tree/main/windows-ltsc2025/windows-ltsc2025-vs2026.Dockerfile)
 
 ## Architecture Support
 

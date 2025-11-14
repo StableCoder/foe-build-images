@@ -1,4 +1,3 @@
-# ALTERNATE_TAGS: windows-ltsc2025 windows
 FROM stabletec/build-core:windows-ltsc2025-vs2022
 
 # VulkanSDK

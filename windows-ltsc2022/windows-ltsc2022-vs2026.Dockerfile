@@ -1,4 +1,5 @@
-FROM stabletec/build-core:windows-ltsc2022-vs2022
+# ALTERNATE_TAGS: windows-ltsc2022
+FROM stabletec/build-core:windows-ltsc2022-vs2026
 
 # VulkanSDK
 COPY windows-install-scripts/vulkan-sdk.ps1 install-scripts/
