@@ -4,7 +4,8 @@
 Param(
     # By default, build release variants of libraries
     [string]$BuildType = "Release",
-    [string]$Version = "10.2.1"
+    [string]$Version = "12.1.0",
+    [string]$InstallDir = "C:/fmt"
 )
 
 $invocationDir = (Get-Item -Path "./").FullName
@@ -25,17 +26,13 @@ try {
     cd fmt-${Version}
 
     # Build library
-    Write-Host "Building library"
-    cmake -B build -G Ninja -D CMAKE_BUILD_TYPE="$BuildType" -D CMAKE_INSTALL_PREFIX="C:/fmt" -D FMT_DOC=OFF -D FMT_TEST=OFF
+    Write-Host "Configuring and compiling"
+    cmake -B build -G Ninja -D CMAKE_BUILD_TYPE="$BuildType" -D CMAKE_INSTALL_PREFIX="$InstallDir" -D FMT_DOC=OFF -D FMT_TEST=OFF
     cmake --build build
     if($LastExitCode -ne 0) { throw }
 
-    # Remove the older install (if it exists)
-    Write-Host "Removing old library"
-    Remove-Item -Recurse -Force -ErrorAction SilentlyContinue -Path C:/fmt
-
     # Install the compiled lib
-    Write-Host "Installing library"
+    Write-Host "Installing"
     cmake --install build
     if($LastExitCode -ne 0) { throw }
     
