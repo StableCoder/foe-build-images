@@ -2,11 +2,11 @@ FROM stabletec/build-core:windows-ltsc2025-vs2019
 
 # VulkanSDK
 COPY windows-install-scripts/vulkan-sdk.ps1 install-scripts/
-RUN cd install-scripts; ./vulkan-sdk.ps1 -Version 1.4.313.1 -EnvironmentVariableScope Machine
+RUN cd install-scripts; ./vulkan-sdk.ps1 -Version 1.4.335.0 -EnvironmentVariableScope Machine
 
 # VulkanRuntime
 COPY windows-install-scripts/vulkan-runtime.ps1 install-scripts/
-RUN cd install-scripts; ./vulkan-runtime.ps1 -Version 1.4.313.0
+RUN cd install-scripts; ./vulkan-runtime.ps1 -Version 1.4.335.0
 
 # OpenXR
 COPY windows-install-scripts/openxr.ps1 install-scripts/
