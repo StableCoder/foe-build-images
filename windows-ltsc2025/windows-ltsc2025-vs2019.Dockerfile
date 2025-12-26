@@ -32,6 +32,10 @@ RUN C:/ps-scripts/entrypoint.ps1 -Quiet; cd install-scripts; ./glfw.ps1
 COPY windows-install-scripts/glm.ps1 install-scripts/
 RUN C:/ps-scripts/entrypoint.ps1 -Quiet; cd install-scripts; ./glm.ps1
 
+# SDL3
+COPY windows-install-scripts/sdl3.ps1 install-scripts/
+RUN C:/ps-scripts/entrypoint.ps1 -Quiet; cd install-scripts; ./sdl3.ps1
+
 # fmt
 COPY windows-install-scripts/fmt.ps1 install-scripts/
 RUN C:/ps-scripts/entrypoint.ps1 -Quiet; cd install-scripts; ./fmt.ps1

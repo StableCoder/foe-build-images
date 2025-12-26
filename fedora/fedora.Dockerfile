@@ -5,7 +5,7 @@ RUN dnf install -y \
     # Dependencies
     assimp-devel bullet-devel catch-devel fmt-devel glfw-devel \
     glm-devel glslang libevent-devel ImageMagick-devel openxr-devel \
-    vulkan-devel yaml-cpp-devel libsodium-devel \
+    SDL3-devel libsodium-devel vulkan-devel yaml-cpp-devel  \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
     # Other

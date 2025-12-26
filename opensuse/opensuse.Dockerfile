@@ -12,6 +12,7 @@ RUN zypper install -y \
     libbullet-devel  \
     libevent-devel \
     libglfw-devel \
+    SDL3-devel \
     libsodium-devel \
     vulkan-devel \
     yaml-cpp-devel \
