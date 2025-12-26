@@ -4,7 +4,7 @@
 Param(
     # By default, build release variants of libraries
     [string]$BuildType = "Release",
-    [string]$Version = "1.1.40"
+    [string]$Version = "1.1.54"
 )
 
 $invocationDir = (Get-Item -Path "./").FullName
