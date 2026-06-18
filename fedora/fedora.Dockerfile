@@ -9,7 +9,7 @@ RUN dnf install -y \
     # Vulkan
     mesa-vulkan-drivers vulkan-tools vulkan-validation-layers \
     # Other
-    python3-pip python3-autopep8 shfmt \
+    python3-pip python3-autopep8 shfmt parallel \
     && dnf clean all
 
 RUN pip3 install cmake-format[yaml]
