@@ -5,7 +5,7 @@
 [![docker pulls](https://img.shields.io/docker/pulls/stabletec/build-foe.svg)](https://hub.docker.com/r/stabletec/build-foe/)
 [![docker stars](https://img.shields.io/docker/stars/stabletec/build-foe.svg)](https://hub.docker.com/r/stabletec/build-foe/)
 
-The Dockers images generated from this repository are used for building the FoE-Engine project.
+The container images generated from this repository are used for building the FoE-Engine project.
 
 ## Current tags and respective `Dockerfile` links
 
